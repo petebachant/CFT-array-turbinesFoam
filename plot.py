@@ -52,31 +52,40 @@ def plot_meancontquiv():
     ax = plt.axes()
     ax.set_aspect(2.0)
 
-def plot_cp(angle0=540.0):
-    df = pd.read_csv("postProcessing/turbines/0/turbine.csv")
+def plot_cp(turbine="turbine1", angle0=540.0):
+    df = pd.read_csv("postProcessing/turbines/0/{}.csv".format(turbine))
     df = df.drop_duplicates("time", take_last=True)
     if df.angle_deg.max() < angle0:
         angle0 = 0.0
-    print("Performance from {:.1f}--{:.1f} degrees:".format(angle0, 
+    print("{} performance from {:.1f}--{:.1f} degrees:".format(turbine, angle0, 
           df.angle_deg.max()))
     print("Mean TSR = {:.2f}".format(df.tsr[df.angle_deg >= angle0].mean()))
     print("Mean C_P = {:.2f}".format(df.cp[df.angle_deg >= angle0].mean()))
     print("Mean C_D = {:.2f}".format(df.cd[df.angle_deg >= angle0].mean()))
-    plt.plot(df.angle_deg, df.cp)
+    plt.plot(df.angle_deg, df.cp, label=turbine)
     plt.xlabel("Azimuthal angle (degrees)")
     plt.ylabel("$C_P$")
     plt.tight_layout()
+    
+def plot_cp_all():
+    turbines = [t.replace(".csv", "") for t in os.listdir("postProcessing/turbines/0/")]
+    for turbine in turbines:
+        try:
+            plot_cp(turbine)
+        except AttributeError:
+            pass
+    plt.legend(loc="best")
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         if sys.argv[1] == "wake":
             plot_meancontquiv()
         elif sys.argv[1] == "perf":
-            plot_cp()
+            plot_cp_all()
         elif sys.argv[1] == "blade":
-            plot_blade_perf()
+            plot_blade_perf("turbine2")
         elif sys.argv[1] == "strut":
-            plot_strut_perf()
+            plot_strut_perf("turbine2")
     else:
-        plot_cp()
+        plot_cp_all()
     plt.show()

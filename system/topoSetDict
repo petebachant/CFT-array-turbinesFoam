@@ -18,7 +18,7 @@ FoamFile
 actions
 (
     {
-        name 	turbine;
+        name 	turbine1;
         type	cellSet;
         action	new;
         source	cylinderToCell;
@@ -32,13 +32,38 @@ actions
     }
 
     {
-        name    turbine;
+        name    turbine1;
         type    cellZoneSet;
         action  new;
         source  setToCellZone;
         sourceInfo
         {
-            set turbine;
+            set turbine1;
+        }
+    }
+    
+    {
+        name 	turbine2;
+        type	cellSet;
+        action	new;
+        source	cylinderToCell;
+        sourceInfo
+        {
+            type cylinder; 
+            p1 (1 1 -0.625); 
+            p2 (1 1 0.625); 
+            radius 0.625;
+        }
+    }
+
+    {
+        name    turbine2;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set turbine2;
         }
     }
 );

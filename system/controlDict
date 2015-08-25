@@ -56,9 +56,9 @@ libs
 
 DebugSwitches
 {
-    crossFlowTurbineALSource 0;
-    actuatorLineSource  0;
-    actuatorLineElement 0;
+    crossFlowTurbineALSource 1;
+    actuatorLineSource  1;
+    actuatorLineElement 1;
     LeishmanBeddoes 0;
     LeishmanBeddoes3G 0;
     LeishmanBeddoesSGC 0;

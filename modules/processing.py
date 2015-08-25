@@ -97,8 +97,8 @@ def calcwake(t1=0.0):
             "y/R" : y_R, 
             "z/H" : z_H}
     
-def plot_al_perf(name="blade1"):
-    df_turb = pd.read_csv("postProcessing/turbines/0/turbine.csv")
+def plot_al_perf(turbine="turbine1", name="blade1"):
+    df_turb = pd.read_csv("postProcessing/turbines/0/{}.csv".format(turbine))
     df_turb = df_turb.drop_duplicates("time", take_last=True)
     df = pd.read_csv("postProcessing/actuatorLines/0/{}.csv".format(name))
     df = df.drop_duplicates("time", take_last=True)
@@ -116,11 +116,11 @@ def plot_al_perf(name="blade1"):
     plt.ylabel("Relative velocity (m/s)")
     plt.tight_layout()
     
-def plot_blade_perf():
-    plot_al_perf("blade1")
+def plot_blade_perf(turbine="turbine1"):
+    plot_al_perf(turbine, "blade1")
     
-def plot_strut_perf():
-    plot_al_perf("strut1")
+def plot_strut_perf(turbine="turbine1"):
+    plot_al_perf(turbine, "strut1")
 
 def main():
     p = "figures"
