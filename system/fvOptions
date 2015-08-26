@@ -175,6 +175,7 @@ turbine2
     crossFlowTurbineALSourceCoeffs
     {
         origin  (1 1 0);
+        axis    (0 0 -1);
     }
 }
 
