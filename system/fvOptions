@@ -32,9 +32,7 @@ turbine1
         tipEffect           1;
         freeStreamVelocity  (1 0 0);
         tipSpeedRatio       1.9;
-        tsrAmplitude        0.19;       // Amplitude for TSR oscillation
-        tsrPhase            0.70;       // Angle of first peak (rad)
-        
+
         dynamicStall
         {
             active              on;
@@ -78,7 +76,7 @@ turbine1
                 E0          0.16;
             }
         }
-        
+
         flowCurvature
         {
             active              on;
@@ -112,7 +110,7 @@ turbine1
                 azimuthalOffset 240;
             }
         }
-        
+
         struts
         {
             strut1
@@ -138,9 +136,9 @@ turbine1
                 azimuthalOffset 240;
             }
         }
-        
+
         shaft
-        { 
+        {
             nElements   20;
             elementProfiles (cylinder);
             elementData
@@ -149,12 +147,12 @@ turbine1
                 ( 0.66 0.09)
             );
         }
-        
+
         profileData
         {
             NACA0020
             {
-                data 
+                data
                 (   // alpha C_l C_d
                     #include "NACA0021_1.6e5"
                 );
