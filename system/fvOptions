@@ -100,6 +100,7 @@ turbine1
             strut1Lower
             {
                 $strut1Upper;
+                elementData
                 ( // axialDistance, radius, azimuth, chord, chordMount, pitch
                     (-0.17145 0.0500 0.0 0.0467 0.25 0.0)
                     (-0.17145 0.4572 0.0 0.0467 0.25 0.0)
