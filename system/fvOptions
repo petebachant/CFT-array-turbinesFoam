@@ -119,8 +119,8 @@ turbine1
                 elementProfiles (strutA);
                 elementData
                 ( // axialDistance, radius, azimuth, chord, chordMount, pitch
-                    (0.0 0.05 0.0 0.14 0.3 0.0)
-                    (0.0 0.5 0.0 0.14 0.3 0.0)
+                    (0.0 0.05 0.0 0.0467 0.25 0.0)
+                    (0.0 0.5 0.0 0.0467 0.25 0.0)
                 );
             }
             strut2
