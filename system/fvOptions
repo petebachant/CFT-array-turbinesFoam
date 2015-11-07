@@ -93,8 +93,8 @@ turbine1
                 elementProfiles (NACA63_4_021);
                 elementData
                 ( // axialDistance, radius, azimuth, chord, chordMount, pitch
-                    (-0.5 0.5 0.0 0.14 0.5 0.0)
-                    ( 0.5 0.5 0.0 0.14 0.5 0.0)
+                    (-0.5 0.5 0.0 0.06533 0.5 0.0)
+                    ( 0.5 0.5 0.0 0.06533 0.5 0.0)
                 );
             }
             blade2
