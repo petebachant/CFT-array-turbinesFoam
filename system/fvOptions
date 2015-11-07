@@ -28,7 +28,7 @@ turbine1
         fieldNames          (U);
         origin              (0 0 0);
         axis                (0 0 1);    // Negative for opposite rotation
-        rotorRadius         0.5;
+        rotorRadius         0.4572;
         tipEffect           1;
         freeStreamVelocity  (1 0 0);
         tipSpeedRatio       1.9;
@@ -93,8 +93,8 @@ turbine1
                 elementProfiles (NACA63_4_021);
                 elementData
                 ( // axialDistance, radius, azimuth, chord, chordMount, pitch
-                    (-0.5 0.5 0.0 0.06533 0.5 0.0)
-                    ( 0.5 0.5 0.0 0.06533 0.5 0.0)
+                    (-0.5 0.4572 0.0 0.06533 0.25 0.0)
+                    ( 0.5 0.4572 0.0 0.06533 0.25 0.0)
                 );
             }
             blade2
@@ -119,8 +119,8 @@ turbine1
                 elementProfiles (strutA);
                 elementData
                 ( // axialDistance, radius, azimuth, chord, chordMount, pitch
-                    (0.0 0.05 0.0 0.0467 0.25 0.0)
-                    (0.0 0.5 0.0 0.0467 0.25 0.0)
+                    (0.0 0.0500 0.0 0.0467 0.25 0.0)
+                    (0.0 0.4572 0.0 0.0467 0.25 0.0)
                 );
             }
             strut2
