@@ -30,7 +30,7 @@ turbine1
         axis                (0 0 1);    // Negative for opposite rotation
         rotorRadius         0.4572;
         freeStreamVelocity  (1 0 0);
-        tipSpeedRatio       1.9;
+        tipSpeedRatio       2.5;
 
         dynamicStall
         {
