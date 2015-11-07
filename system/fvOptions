@@ -112,26 +112,45 @@ turbine1
 
         struts
         {
-            strut1
+            strut1Upper
             {
                 writePerf   true;
                 nElements   6;
                 elementProfiles (strutA);
                 elementData
                 ( // axialDistance, radius, azimuth, chord, chordMount, pitch
-                    (0.0 0.0500 0.0 0.0467 0.25 0.0)
-                    (0.0 0.4572 0.0 0.0467 0.25 0.0)
+                    (0.17145 0.0500 0.0 0.0467 0.25 0.0)
+                    (0.17145 0.4572 0.0 0.0467 0.25 0.0)
                 );
             }
-            strut2
+            strut1Lower
             {
-                $strut1;
+                $strut1Upper;
+                ( // axialDistance, radius, azimuth, chord, chordMount, pitch
+                    (-0.17145 0.0500 0.0 0.0467 0.25 0.0)
+                    (-0.17145 0.4572 0.0 0.0467 0.25 0.0)
+                );
+            }
+            strut2Upper
+            {
+                $strut1Upper;
                 writePerf   false;
                 azimuthalOffset 120;
             }
-            strut3
+            strut2Lower
             {
-                $strut2;
+                $strut1Lower;
+                writePerf   false;
+                azimuthalOffset 120;
+            }
+            strut3Upper
+            {
+                $strut2Upper;
+                azimuthalOffset 240;
+            }
+            strut3Lower
+            {
+                $strut2Lower;
                 azimuthalOffset 240;
             }
         }
