@@ -143,8 +143,8 @@ turbine1
             elementProfiles (cylinder);
             elementData
             ( // axialDistance, diameter
-                (-0.66 0.09)
-                ( 0.66 0.09)
+                (-1.067 0.04826)
+                ( 1.067 0.04826)
             );
         }
 
