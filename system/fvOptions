@@ -89,9 +89,8 @@ turbine1
             {
                 writePerf   true;
                 nElements   14;
-                tipEffectLength 1e2;
-                rootEffectLength $tipEffectLength;
-                elementProfiles (NACA0020);
+                endEffects  on;
+                elementProfiles (NACA63_4_021);
                 elementData
                 ( // axialDistance, radius, azimuth, chord, chordMount, pitch
                     (-0.5 0.5 0.0 0.14 0.5 0.0)
@@ -117,7 +116,7 @@ turbine1
             {
                 writePerf   true;
                 nElements   6;
-                elementProfiles (NACA0020);
+                elementProfiles (strutA);
                 elementData
                 ( // axialDistance, radius, azimuth, chord, chordMount, pitch
                     (0.0 0.05 0.0 0.14 0.3 0.0)
@@ -150,12 +149,20 @@ turbine1
 
         profileData
         {
-            NACA0020
+            NACA63_4_021
             {
                 data
                 (   // alpha C_l C_d
                     #include "NACA0021_1.6e5"
                 );
+            }
+            strutA
+            {
+                data
+                (
+                    (-180 0 0.2)
+                    ( 180 0 0.2)
+                )
             }
             cylinder
             {
