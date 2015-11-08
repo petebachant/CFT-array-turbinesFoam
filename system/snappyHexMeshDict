@@ -35,22 +35,22 @@ geometry
         type searchableCylinder;
         point1 (0 0 -0.75);
         point2 (0 0 0.75);
-        radius 0.75;       
+        radius 0.75;
     }
-    
+
     turbine2
     {
         type searchableCylinder;
         point1 (1 1 -0.75);
         point2 (1 1 0.75);
-        radius 0.75;       
+        radius 0.75;
     }
 */
     refinementBox
     {
         type searchableBox;
-        min (-0.9 -2 -0.8);
-        max (4 2 0.8);
+        min (-0.9 -2.5 -0.8);
+        max ( 4.0  2.5  0.8);
     }
 };
 
@@ -140,7 +140,7 @@ castellatedMeshControls
     // - outside. Same but cells outside.
 
     refinementRegions
-    {   
+    {
         refinementBox
         {
             mode        inside;
